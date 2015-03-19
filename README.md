@@ -1,21 +1,28 @@
 ## Developer Community Content on [AirPair.com](https://www.airpair.com/)
 
-[This post was submitted to AirPair by Jonathon Kresner (jkresner).
+[This post was submitted to AirPair by Jonathon Kresner (jkresner)
 ![expressjs-and-passportjs-sessions-deep-dive](https://www.airpair.com/posts/thumb/541a36c3535a850b00b05697)
 ](https://www.airpair.com/posts/review/541a36c3535a850b00b05697)
 
-### To edit this post
+All content on AirPair is stored in git so that it can be collaboratively improved using Pull Requests.
 
-1. Please fork this post
-2. Edit the `post.md` on the `edit` branch. 
-3. Create a pull request from 
+### To Edit / Contribute
 
-```
-{yourfork}/expressjs-and-passportjs-sessions-deep-dive:edit 
-to 
-airpair/expressjs-and-passportjs-sessions-deep-dive:edit 
-```
+#### Manually
+
+1. Fork this post
+2. Edit your fork's `post.md` file on the `edit` branch
+3. Create a pull request from your fork's `edit` branch to the parent repos' `edit branch
+
 \*\* **Please do not merge the edit branch into master!**
+
+#### The easy way
+
+1. [Fork this post](https://www.airpair.com/posts/fork/541a36c3535a850b00b05697) on AirPair
+
+2. [Edit on AirPair](https://www.airpair.com/posts/edit/541a36c3535a850b00b05697) using the live editor
+
+3. Create a Pull Request from the Editor
 
 ## Licensing of Content
 
