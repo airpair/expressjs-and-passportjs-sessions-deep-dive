@@ -38,8 +38,8 @@ merge or reject Pull Requests.
 ### Publishing
 
 AirPair does not automatically "sync" with the master repo. As an author you may
-sync your post while it is still in community review. Once fully published, 
-request and editor to sync HEAD with the live version published on airpair.com
+sync your post while it is still in community review. Once fully published, find 
+an editor in AirPair chat to sync HEAD with the live version published on airpair.com
 
 ## Licensing of Content
 
