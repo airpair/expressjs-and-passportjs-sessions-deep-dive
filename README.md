@@ -14,7 +14,7 @@ Content on AirPair is stored using git so we can collaboratively improve it usin
 2. Edit your fork's `post.md` file on the `edit` branch
 3. Create a pull request from your fork's `edit` branch to the parent repo's `edit` branch
 
-\*\* ***Please do not merge the edit branch into master!***
+\*\* ***Please do not merge the `edit` branch into `master`!***
  
 #### The easy way
 
