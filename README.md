@@ -1,6 +1,6 @@
 ## Developer Community Content on [AirPair.com](https://www.airpair.com/)
 
-[This post was submitted to AirPair by Jonathon Kresner (jkresner)
+[This post was submitted and published on AirPair by Jonathon Kresner (jkresner)
 ![expressjs-and-passportjs-sessions-deep-dive](https://www.airpair.com/posts/thumb/541a36c3535a850b00b05697)
 ](https://www.airpair.com/posts/review/541a36c3535a850b00b05697)
 
