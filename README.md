@@ -22,50 +22,31 @@ Content on AirPair is stored using git so we can collaboratively improve it usin
 ![Fork on AirPair](https://airpair.github.io/posts/fork.png) 
 ](https://www.airpair.com/posts/fork/541a36c3535a850b00b05697)
 
-2. [Edit on AirPair](https://www.airpair.com/posts/edit/541a36c3535a850b00b05697) using the live editor
-
+2. [Edit on AirPair  using the live editor
 ![Edit on AirPair](https://airpair.github.io/posts/edit.png)
+](https://www.airpair.com/posts/edit/541a36c3535a850b00b05697)
 
-3. One click Pull Request from the Editor
-
+3. [Create one-click Pull Requests from the live editor
 ![Pull Request on AirPair](https://airpair.github.io/posts/pr.png)
+](https://www.airpair.com/posts/edit/541a36c3535a850b00b05697)
 
-## Licensing of Content
-
-Content submitted to AirPair with no monetary exchange belongs to the author. Contributors are
-granted rights to copy this content for the purpose of contributing, however under no circumstances
-do contributions grant co-ownership rights with the original author. This content may not be
-published anywhere other than airpair.com without the author's permission.
-
-If any finacial exchange has occured between the author and AirPair, AirPair assumes ownership
-of this content and it may not be published, including by the author anywhere other than
-airpair.com without permission.
-
-## Author Instructions
-
-#### Editing
-
-All edits are tracked via this GitHub repo. You can use the AirPair editor to
-save changes back to this repo, or edit the markdown file with any tool of your choice.
-
-#### Accepting contributions
+### Accepting / merging contributions
 
 All contributions come in the form of Pull Requests. Use GitHub to view and
 merge or reject Pull Requests.
 
-#### Updating your post on AirPair
+### Publishing
 
-AirPair does not automatically sync with this repo. Propagating HEAD is a
-manual process which you can do, by clicking "Publish" during the community review phase.
-Once your post is fully published, updating AirPair from this repo will
-require an AirPair user with editor permissions.
+AirPair does not automatically "sync" with the master repo. As an author you may
+sync your post while it is still in community review. Once fully published, 
+request and editor to sync HEAD with the live version published on airpair.com
 
-## Contributor Instructions
+## Licensing of Content
 
-#### Editing
+Content submitted to AirPair with no monetary exchange belongs to the author. 
+If a finacial exchange has occured between the author and AirPair, AirPair assumes ownership
+of this content. This content may not be published anywhere other than airpair.com without 
+the owners consent.
 
-Before you start editing, if it's been more than a few hours since you forked this post,
-we highly recomment updating your fork so not to suggest edits on an old version of the post.
-
-Edit your fork with the tool of your choice and then use GitHub to create a pull request from you
-fork with the original repo as your base.
+Contributors are granted rights to copy this content for the purpose of contributing, however 
+under no circumstances do contributions grant co-ownership rights with the owner of this content.
