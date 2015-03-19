@@ -4,25 +4,31 @@
 ![expressjs-and-passportjs-sessions-deep-dive](https://www.airpair.com/posts/thumb/541a36c3535a850b00b05697)
 ](https://www.airpair.com/posts/review/541a36c3535a850b00b05697)
 
-All content on AirPair is stored in git so that it can be collaboratively improved using Pull Requests.
+All content on AirPair is stored in git so we can collaboratively improve it using Pull Requests.
 
-### To Edit / Contribute
+### To edit / contribute
 
 #### Manually
 
 1. Fork this post
 2. Edit your fork's `post.md` file on the `edit` branch
-3. Create a pull request from your fork's `edit` branch to the parent repos' `edit branch
+3. Create a pull request from your fork's `edit` branch to the parent repo's `edit` branch
 
 \*\* **Please do not merge the edit branch into master!**
-
+ 
 #### The easy way
 
-1. [Fork this post](https://www.airpair.com/posts/fork/541a36c3535a850b00b05697) on AirPair
+1. [Fork this post on AirPair](https://www.airpair.com/posts/fork/541a36c3535a850b00b05697)
+
+![Fork on AirPair](https://airpair.github.io/posts/fork.png)
 
 2. [Edit on AirPair](https://www.airpair.com/posts/edit/541a36c3535a850b00b05697) using the live editor
 
-3. Create a Pull Request from the Editor
+![Edit on AirPair](https://airpair.github.io/posts/edit.png)
+
+3. One click Pull Request from the Editor
+
+![Pull Request on AirPair](https://airpair.github.io/posts/pr.png)
 
 ## Licensing of Content
 
