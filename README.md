@@ -18,9 +18,9 @@ Content on AirPair is stored using git so we can collaboratively improve it usin
  
 #### The easy way
 
-1. [Fork this post on AirPair](https://www.airpair.com/posts/fork/541a36c3535a850b00b05697)
-
-![Fork on AirPair](https://airpair.github.io/posts/fork.png)
+1. [Fork this post on AirPair
+![Fork on AirPair](https://airpair.github.io/posts/fork.png) 
+](https://www.airpair.com/posts/fork/541a36c3535a850b00b05697)
 
 2. [Edit on AirPair](https://www.airpair.com/posts/edit/541a36c3535a850b00b05697) using the live editor
 
