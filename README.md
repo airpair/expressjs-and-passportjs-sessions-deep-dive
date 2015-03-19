@@ -1,10 +1,10 @@
-## AirPair Social Authoring
+## 
 
-### Thank you
+This post was submitted by Jonathon Kresner, to [AirPair's Community Posts](https://www.airpair.com/posts). 
 
-Thanks for contributing content to [AirPair's community posts section](https://www.airpair.com/posts). This post authored by Jonathon Kresner can be edited at:
+![expressjs-and-passportjs-sessions-deep-dive](https://www.airpair.com/posts/thumb/541a36c3535a850b00b05697)
 
-https://www.airpair.com/posts/edit/541a36c3535a850b00b05697
+https://www.airpair.com/posts/review/541a36c3535a850b00b05697
 
 ## Licensing of Content
 
