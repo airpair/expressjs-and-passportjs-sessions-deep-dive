@@ -1,10 +1,8 @@
-## 
+## Developer Content Published on [AirPair.com](https://www.airpair.com/)
 
-This post was submitted by Jonathon Kresner, to [AirPair's Community Posts](https://www.airpair.com/posts). 
-
+[This post was submitted by Jonathon Kresner, to AirPair's Community Power Social Authoring Platform. 
 ![expressjs-and-passportjs-sessions-deep-dive](https://www.airpair.com/posts/thumb/541a36c3535a850b00b05697)
-
-https://www.airpair.com/posts/review/541a36c3535a850b00b05697
+](https://www.airpair.com/posts/review/541a36c3535a850b00b05697)
 
 ## Licensing of Content
 
