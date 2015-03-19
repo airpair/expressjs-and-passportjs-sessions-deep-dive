@@ -4,7 +4,7 @@
 ![expressjs-and-passportjs-sessions-deep-dive](https://www.airpair.com/posts/thumb/541a36c3535a850b00b05697)
 ](https://www.airpair.com/posts/review/541a36c3535a850b00b05697)
 
-All content on AirPair is stored in git so we can collaboratively improve it using Pull Requests.
+Content on AirPair is stored using git so we can collaboratively improve it using Pull Requests.
 
 ### To edit / contribute
 
