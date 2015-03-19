@@ -1,8 +1,10 @@
-## Developer Content Published on [AirPair.com](https://www.airpair.com/)
+## Developer Content on [AirPair.com](https://www.airpair.com/)
 
-[This post was submitted by Jonathon Kresner, to AirPair's Community Power Social Authoring Platform. 
+[This post was submitted by Jonathon Kresner, to AirPair's Social Authoring Platform. 
 ![expressjs-and-passportjs-sessions-deep-dive](https://www.airpair.com/posts/thumb/541a36c3535a850b00b05697)
 ](https://www.airpair.com/posts/review/541a36c3535a850b00b05697)
+
+Please fork this post and make changes to `post.md` on the `edit` branch. To send typo fixes and other suggestions for improving this content, please create pull requests from `yourfork/expressjs-and-passportjs-sessions-deep-dive:edit` to `airpair/expressjs-and-passportjs-sessions-deep-dive:edit`. Do not merge the edit branch into master.
 
 ## Licensing of Content
 
