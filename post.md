@@ -104,7 +104,7 @@ It then uses the deserializeUser function which receives the req.session.passpor
 
 `req.user` is a PassportJS specific property that is the result of the `deserializeUser` function using the data from `req.session.passport.user`
 
-### Optimize PassportJS 
+## Optimize PassportJS 
 
 I realized that in the old app, we followed the default suggestion and were hitting the database twice on every single API call to populate all the users' information in memory. But in practice, we rarely needed more than the userId in our backend code. So this time round, I've made the decision to stuff the name and email into the session object and avoid making multiple database trips on every single api call. With many pages on the site making 5-10 calls to render a single page, this seemed like a cheap way to significantly reduce database load. Here's what the new app looks like:
 
@@ -121,11 +121,14 @@ I realized that in the old app, we followed the default suggestion and were hitt
       done(null, sessionUser)
     })
 
-### Optimize ExpressJS Sessions
+## Optimize ExpressJS Sessions
 
-#### When are sessions created?
+### When are sessions created?
 
-Express will create a new session (and write it to the database), whenever it does not detect a session cookie. Turns out, the order you set the session middleware and tell express where your static directory is, has some pretty dramatic nuances. Here's what the new AirPair index.js looks like:
+Express will create a new session (and write it to the database), whenever it
+does not detect a session cookie. Turns out, the order you set the session
+middleware and tell express where your static directory is, has some pretty
+dramatic nuances. Here's what the new AirPair index.js looks like:
 
 <!--?prettify lang=javascript linenums=false?-->
 
@@ -146,7 +149,7 @@ Express will create a new session (and write it to the database), whenever it do
     routes.init(app)	
     app.listen(config.port, function() {})
 
-#### Avoid Sessions for Static Resources
+### Avoid Sessions for Static Resources
 
 Turns out, if you add the session middleware before your static directory, 
 Express will generate sessions for requests on static files like .css, images 
@@ -161,7 +164,7 @@ out pretty quickly!
 Simply put your static files first, or even better on a CDN that has nothing to
 do with your node app and your session collection should stay much healthier.
 
-### ExpressJS 4.0 Middleware Order
+## ExpressJS 4.0 Middleware Order
 
 The middleware setup for ExpressJS 4.0 is quite different from ExpressJS 3.0 where everything came baked in. You now need to include each piece manually with it's own NPM package. In case you want to see an up to date version of how each  piece is chained together, because there are many non-working legacy examples floating around, this is what I ended up with.
 
@@ -188,7 +191,7 @@ Couple of gotchas that sunk half an hour or so for me, include that Cookie Parse
     app.use(passport.session())
 
 
-## The AHA! **live-reload** middleware
+### The AHA! **live-reload** middleware
 
 So it turns out, the problem that held me up was the position of the live-reload middleware. LiveReload injects script into every response to listen for changes emitted from the server. I don't know the exact issue, but having it before the session middleware, broke the session cookie being sent correctly to the client.
 
