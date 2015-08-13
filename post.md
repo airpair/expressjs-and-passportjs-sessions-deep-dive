@@ -145,11 +145,18 @@ Express will create a new session (and write it to the database), whenever it do
 
 #### Avoid Sessions for Static Resources
 
-Turns out, if you add the session middleware before your static directory, Express with generate sessions for requests on static files like .css, images and JavaScript. 
+Turns out, if you add the session middleware before your static directory, 
+Express will generate sessions for requests on static files like .css, images 
+and JavaScript. 
 
-If a new visitor without a session loads a page with 10 static files, the clients browser will not yet have a cookie and will send 10 cookieless requests all triggering express to create sessions. Owch! So that's what was happening... If you haven't done something smart to detect bots and scrapers, things can blow out pretty quickly!
+If a new visitor without a session loads a page with 10 static files, the 
+clients browser will not yet have a cookie and will send 10 cookieless requests 
+all triggering express to create sessions. Owch! So that's what was happening... 
+If you haven't done something smart to detect bots and scrapers, things can blow
+out pretty quickly!
 
-Simply put your static files first, or even better on a CDN that has nothing to do with your node app and your session collection should stay much healthier.
+Simply put your static files first, or even better on a CDN that has nothing to
+do with your node app and your session collection should stay much healthier.
 
 ### ExpressJS 4.0 Middleware Order
 
