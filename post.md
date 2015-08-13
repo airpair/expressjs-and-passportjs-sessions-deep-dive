@@ -17,9 +17,10 @@ one another. Around October 2014 I noticed some 10,000,000 active session docume
 Luckily it never effected us in a material way, but I didn't want to take
 my chances. So I spent some time observing how Express and PassportJS plug into each other, here's what I learned on the way to uncovering what was going wrong.
 
-### 1.1 There is only One Session
+### 1.1 There is only ONE Session
 
-As [per the passport docs](http://passportjs.org/guide/configure/) configuring Passport looks something like this:
+As per the passportJS docs<sup>The official [passportJS docs](http://passportjs.org/guide/configure/)</sup> configuring Passport via
+express middleware looks something like this:
 
 <!--?prettify lang=javascript linenums=false?-->
 
@@ -33,7 +34,11 @@ As [per the passport docs](http://passportjs.org/guide/configure/) configuring P
       app.use(app.router);
     });
 
-The syntax is a bit misleading I think... The first thing to conceptually get your head around is that even though you configure `express.session()` and`passport.session()`, there is really only one session, which is managed by Express. Passport merely piggy backs off the ExpressJS session to store data for authenticated users. Let's take a look.
+The syntax is a bit misleading I think ... 
+
+The first thing to conceptually get your head around is that even though you configure `express.session()` and`passport.session()`, there is really only one session, which is managed by Express. Passport merely piggy backs off the ExpressJS session to store data for authenticated users. 
+
+Let's take a look how:
 
 ### 1.2 ExpressJS Sessions `req.session`
 
