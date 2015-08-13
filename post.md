@@ -1,14 +1,18 @@
-## 1 Stuck on ExpressJS Middleware
+Synopsis
+> There are some major optimizations (bottleknecks) you can create by passing
+through your ExpressJS Middleware with a fine tooth comb. I was originally 
+stuck for 6 hours on middleware issues while settings up PassportJS the second
+time round after noticing 10,000,000+ sessions in mongo with my first 
+implementation from 2013. There's lots of good stuff in here for all levels of
+nodejs developer building on express. The main take away is to watch out for is **the order you add ExpressJS Middleware** to your app. As I'll cover more than once below, a tiny swap in middleware order can have HUGE consequences.
 
-I'm excited to write this post because I was stuck for 6 hours on middleware issues while settings up PassportJS. I wish I could have accessed the right expert, but AirPair hasn't yet scaled to be quick enough in many niche cases like this one. In an ironically good way, my frustrations reminded me how important our mission is. Thousands like myself get stuck daily. Saving people time is AirPair's mission and one day soon, we'll be able connect you with the right person for ANYTHING in less than half an hour. 
+<sub>Post first published Oct 2014, Updated Aug 2015</sub>
 
-Until then, if you're setting up a new app with PassportJS, I hope this post helps. There's lots of good stuff in here. The main take away is to watch out for is **the order you add ExpressJS Middleware** to your app. As I'll cover more than once below, a tiny swap in middleware order can have HUGE consequences.
-
-## 2 Understanding ExpressJS & PassportJS
+## 1 ExpressJS & PassportJS 101
 
 Though I've setup ExpressJS and PassportJS before, in the old airpair.com app, I didn't deeply understand each. There are currently some 10,000,000 active session documents in the old app's MongoDB instance, which is obviously not right. Luckily it hasn't effected us in a material way, but I'm sure it would eventually. So I spent some time observing how Express and PassportJS plug into each other, here's what I learned on the way to uncovering what was going wrong.
 
-### 2.1 There is only One Session
+### 1.1 There is only One Session
 
 As [per the passport docs](http://passportjs.org/guide/configure/) configuring Passport looks something like this:
 
@@ -26,7 +30,7 @@ As [per the passport docs](http://passportjs.org/guide/configure/) configuring P
 
 The syntax is a bit misleading I think... The first thing to conceptually get your head around is that even though you configure `express.session()` and`passport.session()`, there is really only one session, which is managed by Express. Passport merely piggy backs off the ExpressJS session to store data for authenticated users. Let's take a look.
 
-### 2.2 Express `req.session`
+### 1.2 ExpressJS Sessions `req.session`
 
 `req.session` is just a json object that gets persisted by the `express-session` middleware, using a store of your choice e.g. Mongo or Redis. Logging to the terminal, you'll see a default session object looks something like:
 
