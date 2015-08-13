@@ -1,10 +1,10 @@
 Synopsis
-> There are some major optimizations (bottleknecks) you can create by passing
-through your ExpressJS Middleware with a fine tooth comb. I was originally 
-stuck for 6 hours on middleware issues while settings up PassportJS the second
-time round after noticing 10,000,000+ sessions in mongo with my first 
-implementation from 2013. There's lots of good stuff in here for all levels of
-nodejs developer building on express. The main take away is to watch out for is **the order you add ExpressJS Middleware** to your app. As I'll cover more than once below, a tiny swap in middleware order can have HUGE consequences.
+> There are major optimizations (bottleknecks) you can spot by passing
+through your `ExpressJS Middleware` with a fine tooth comb. I was originally 
+stuck for 6 hours on a middleware issue while settings up PassportJS the second
+time round after noticing 10,000,000+ sessions in AirPair's MongoDB production
+instance in late 2014. There's good stuff in this deep dive for all levels of
+nodejs developers building on express. The main take away is **watch out for the order you add ExpressJS Middleware** to your app. As I'll cover more than once below, a tiny swap in middleware order can have HUGE consequences.
 
 <sub>Post first published Oct 2014, Updated Aug 2015</sub>
 
