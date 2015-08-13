@@ -6,16 +6,19 @@ time round after noticing 10,000,000+ sessions in AirPair's MongoDB production
 instance in late 2014. There's good stuff in this deep dive for all levels of
 nodejs developers building on express. The main take away is **watch out for the order you add ExpressJS Middleware** to your app. As I'll cover more than once below, a tiny swap in middleware order can have HUGE consequences.
 
-<sub>Post first published Oct 2014, Updated Aug 2015</sub>
+<sub>First published Oct 2014, Updated Aug 2015, intended to significantly 
+enhance on discussion around bots, scrappers & analytics in Nov 2015.</sub>
 
 ## ExpressJS & PassportJS 101
 
 Though I'd setup ExpressJS and PassportJS in 2013 for the *v0* version
 of airpair.com, I didn't deeply understand each and their relationship with
-one another. Around October 2014 I noticed some 10,000,000 active session documents in MongoDB, which is obviously not right. 
+one another. Around October 2014 I noticed some 10,000,000 active session documents in MongoDB, which was obviously not right. 
 
-Luckily it never effected us in a material way, but I didn't want to take
-my chances. So I spent some time observing how Express and PassportJS plug into each other, here's what I learned on the way to uncovering what was going wrong.
+Luckily it never effected us in a material way, at the time I didn't want to 
+take my chances. So I spent some time observing how Express and PassportJS plug 
+into each other, here's what I learned on the way to uncovering what was going
+wrong.
 
 ### There is only ONE Session
 
