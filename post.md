@@ -188,7 +188,7 @@ Couple of gotchas that sunk half an hour or so for me, include that Cookie Parse
     app.use(passport.session())
 
 
-## 3 The AHA! live-reload issues
+## The AHA! **live-reload** middleware
 
 So it turns out, the problem that held me up was the position of the live-reload middleware. LiveReload injects script into every response to listen for changes emitted from the server. I don't know the exact issue, but having it before the session middleware, broke the session cookie being sent correctly to the client.
 
