@@ -1,5 +1,5 @@
 Synopsis
-> There are major optimizations (bottleknecks) you can spot by passing
+> There are major optimizations (and bottleknecks) you can spot by passing
 through your `ExpressJS Middleware` with a fine tooth comb. I was originally 
 stuck for 6 hours on a middleware issue while settings up PassportJS the second
 time round after noticing 10,000,000+ sessions in AirPair's MongoDB production
@@ -10,7 +10,12 @@ nodejs developers building on express. The main take away is **watch out for the
 
 ## 1 ExpressJS & PassportJS 101
 
-Though I've setup ExpressJS and PassportJS before, in the old airpair.com app, I didn't deeply understand each. There are currently some 10,000,000 active session documents in the old app's MongoDB instance, which is obviously not right. Luckily it hasn't effected us in a material way, but I'm sure it would eventually. So I spent some time observing how Express and PassportJS plug into each other, here's what I learned on the way to uncovering what was going wrong.
+Though I'd setup ExpressJS and PassportJS in 2013 for the *v0* version
+of airpair.com, I didn't deeply understand each and their relationship with
+one another. Around October 2014 I noticed some 10,000,000 active session documents in MongoDB, which is obviously not right. 
+
+Luckily it never effected us in a material way, but I didn't want to take
+my chances. So I spent some time observing how Express and PassportJS plug into each other, here's what I learned on the way to uncovering what was going wrong.
 
 ### 1.1 There is only One Session
 
