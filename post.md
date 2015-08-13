@@ -185,10 +185,18 @@ Couple of gotchas that sunk half an hour or so for me, include that Cookie Parse
     app.use(passport.session())
 
 
-## 3 The AHA! live-reload middleware
+## 3 The AHA! live-reload issues
 
 So it turns out, the problem that held me up was the position of the live-reload middleware. LiveReload injects script into every response to listen for changes emitted from the server. I don't know the exact issue, but having it before the session middleware, broke the session cookie being sent correctly to the client.
 
-## Deep Dive
+## Check your Middleware !
 
-I'm glad I took the time to dive deep with Express and Passport for the new airpair.com site. A few tweaks have lead to significantly less database traffic and my deepening understanding of how to utilize req.session will empower us to build some cool interactions and personalization for anonymous visitors.
+I'm glad I took the time to dive deep with Express and Passport for the new 
+airpair.com site. A few tweaks have lead to significantly less database traffic 
+and my deepening understanding of how to utilize req.session will empower us to 
+build some cool interactions and personalization for anonymous visitors.
+
+I highly highly recommend going through all your middleware one at a time
+to understand everything you app is doing on every request. There's lots of
+performance to be gained and power leveraged when you understand things
+piece by piece.
